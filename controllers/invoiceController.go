@@ -1,0 +1,30 @@
+package controllers;
+
+
+import (
+	"github.com/gin-gonic/gin"
+)
+
+func GetInvoices() gin.HandlerFunc {
+	return func(c *gin.Context) {
+
+	}
+}
+
+func GetInovoice() gin.HandlerFunc {
+	return func(c *gin.Context) {
+
+	}
+}
+
+func CreateInvoice() gin.HandlerFunc {
+	return func(c *gin.Context) {
+
+	}
+}
+
+func UpdateInovice() gin.HandlerFunc {
+	return func(c *gin.Context) {
+
+	}
+}
