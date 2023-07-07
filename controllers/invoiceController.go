@@ -1,5 +1,4 @@
-package controllers;
-
+package controllers
 
 import (
 	"github.com/gin-gonic/gin"
@@ -11,7 +10,7 @@ func GetInvoices() gin.HandlerFunc {
 	}
 }
 
-func GetInovoice() gin.HandlerFunc {
+func GetInvoice() gin.HandlerFunc {
 	return func(c *gin.Context) {
 
 	}
@@ -23,7 +22,7 @@ func CreateInvoice() gin.HandlerFunc {
 	}
 }
 
-func UpdateInovice() gin.HandlerFunc {
+func UpdateInvoice() gin.HandlerFunc {
 	return func(c *gin.Context) {
 
 	}
