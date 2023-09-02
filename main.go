@@ -18,7 +18,7 @@ func main() {
 		port = "8080"
 	}
 	router := gin.New()
-	router.User(gin.Logger())
+	router.Use(gin.Logger())
 	routes.UserRoutes(router)
 	router.Use(middleware.Authentication())
 	routes.FoodRoutes(router)
