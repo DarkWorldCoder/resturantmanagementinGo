@@ -139,6 +139,7 @@ func GetOrderItem() gin.HandlerFunc {
 func UpdateOrderItem() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		var ctx, cancel = context.WithTimeout(context.Background(), 100*time.Second)
+		defer cancel()
 		orderItemId := c.Param("order_item_id")
 		var orderItem models.OrderItem
 		if err := c.BindJSON(&orderItem); err != nil {
@@ -166,7 +167,7 @@ func UpdateOrderItem() gin.HandlerFunc {
 		}
 		filter := bson.M{"order_item_id": orderItemId}
 		result, insertError := orderItemCollection.UpdateOne(ctx, filter, updateObj, &opt)
-		defer cancel()
+
 		if insertError != nil {
 			msg := "Order item update failed"
 			c.JSON(http.StatusInternalServerError, gin.H{
