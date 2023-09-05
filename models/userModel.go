@@ -15,7 +15,7 @@ type User struct {
 	Avatar        *string            `json:"avatar"`
 	Created_at    time.Time          `json:"created_at"`
 	Updated_at    time.Time          `json:"updated_at"`
-	User_id       *string            `json:"user_id"`
+	User_Id       string             `json:"user_id"`
 	Refresh_token *string            `json:"refresh_token"`
 	Token         *string            `json:"token"`
 }
